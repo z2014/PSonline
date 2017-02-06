@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div id="tool">
+    	<div class="pen">
+    	    <span>颜色</span>
+    	    <div id="colors"></div>
+    	</div>
+    	<div class="eraser">橡皮</div>
+    	<div class="weight">
+    		<span>粗细</span>
+    		<input type="range" value="50"></input>
+    		<div id="radius"></div>
+    	</div>
+    	<form id="img-upload">
+    		<input type="file" id="file"></input><br>
+    			<!-- <input type="submit" value="上传图片"> -->
+    	</form>
+    	<div class="operation">
+    		<div id="render">渲染图片</div>
+    	    <div id="download">保存图片</div>
+    	</div>
+    	<div id="picture"></div>
+    </div>
+    <div class="canvas">
+		<canvas id="canvas" width="800" height="500">
+			居然还在用不支持canvas的浏览器
+		</canvas>
+	</div>
+	<div>
+		<img src="" id="canvasImg">
+	</div>
+	<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		var globalUser = {tool:'pen',color:'black',weight:15};
+	</script>
+	<script type="text/javascript" src="js/utils.js"></script>
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript" src="js/draw.js"></script>
+    <script type="text/javascript" src="js/upload.js"></script>
+</body>
+</html>
