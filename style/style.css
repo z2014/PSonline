@@ -1,0 +1,174 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.canvas{
+	margin: 50px auto;
+	width: 800px;
+	height: 500px;
+}
+#canvas{
+	border: 1px solid black;
+	display: inline-block;
+}
+#tool{
+	position: absolute;
+	top: 50px;
+}
+.pen{
+	width: 80px;
+	line-height: 30px;
+	background: black;
+	position: absolute;
+	top: 40px;
+	left: 0px;
+	color:white;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	transition:all 1s;
+}
+.pen:hover{
+	left: 20px;
+}
+.pen:hover #colors{
+	display: block;
+}
+#colors{
+	display: none;
+	width: 120px;
+	height: 120px;
+	border: 1px solid black;
+	position: absolute;
+	left: 100px;
+	top: -35px;
+	transition:all 2s;
+}
+.color{
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	margin: 2px;
+}
+.color:hover{
+	cursor: pointer;
+}
+.pen::after{
+	content: '';
+    position: absolute;
+    border-width: 15px;
+    border-color: transparent transparent transparent black;
+    border-style: solid;
+    top: 0px;
+    right: -30px;
+}
+.red::after{
+	border-color: transparent transparent transparent red;
+}
+.blue::after{
+	border-color: transparent transparent transparent blue;
+}
+.green::after{
+	border-color: transparent transparent transparent green;
+}
+.gray::after{
+	border-color: transparent transparent transparent gray;
+}
+.pink::after{
+	border-color: transparent transparent transparent pink;
+}
+.yellow::after{
+	border-color: transparent transparent transparent yellow;
+}
+.orange::after{
+	border-color: transparent transparent transparent orange;
+}
+.black::after{
+	border-color: transparent transparent transparent black;
+}
+.eraser{
+	position: absolute;
+	top: 100px;
+	width: 80px;
+	line-height: 30px;
+	border: 1px solid black;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+.eraser:hover{
+	cursor: pointer;
+}
+.weight{
+	position: absolute;
+	top: 160px;
+	width: 200px;
+	line-height: 30px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+input[type=range] {
+	-webkit-appearance:none;
+	width: 200px;
+	border-radius: 10px;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    height: 15px;
+    border-radius: 10px; /*将轨道设为圆角的*/
+    box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112; /*轨道内置阴影效果*/
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 25px;
+    width: 25px;
+    margin-top: -5px; /*使滑块超出轨道部分的偏移量相等*/
+    background: #ffffff; 
+    border-radius: 50%; /*外观设置为圆形*/
+    border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+    box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+}
+#radius{
+	margin: 10px auto;
+	width: 15px;
+	height: 15px;
+	border-radius: 15px;
+	border: 1px solid black;
+}
+#img-upload{
+	position: absolute;
+	top: 280px;
+	width: 200px;
+}
+.operation{
+	position: absolute;
+	top: 320px;
+	width: 100px;
+}
+#picture{
+	position: absolute;
+	top: 400px;
+}
+#render,#download{
+	padding: 5px;
+	box-shadow: 0 0 3px 3px #ccc;
+	margin: 5px;
+	text-align: center;
+	transition:all 1s;
+}
+#download:hover,#render:hover{
+	padding: 5px;
+	border: 1px solid #ccc;
+	box-shadow: none;
+	cursor: pointer;
+	margin: 5px;
+	text-align: center;
+}
