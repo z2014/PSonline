@@ -44,7 +44,7 @@ $.fn.RangeSlider = function(cfg){
         callback: cfg && cfg.callback ? cfg.callback : null
     };
 
-    var $input = $(this);
+    var $input = $('#progress');
     var min = this.sliderCfg.min;
     var max = this.sliderCfg.max;
     var step = this.sliderCfg.step;
